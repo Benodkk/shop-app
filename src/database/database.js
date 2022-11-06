@@ -1,12 +1,12 @@
-var casual = require('casual');
- 
-let database=[]
+import { sentences } from "casual";
 
-for (let i = 1; i<=7; i++) {
-    database.push({
-        id:i,
-        description: casual.sentences(4)
-    });
+let database = [];
+
+for (let i = 1; i <= 7; i++) {
+  database.push({
+    id: i,
+    description: sentences(4),
+  });
 }
 
-    console.log(JSON.stringify(database));
+console.log(JSON.stringify(database));

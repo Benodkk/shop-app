@@ -1,21 +1,25 @@
-import React, {useState} from "react"
+import React, { useState } from "react";
 
-const CurrencyContext = React.createContext()
+const CurrencyContext = React.createContext();
 
-function CurrencyContextProvider (props) {
+function CurrencyContextProvider(props) {
+  const [cart, setCart] = useState([]);
 
-    const [currency, setCurrency] = useState('$')
+  const [currency, setCurrency] = useState("$");
 
-    const change = (e) => { 
-        setCurrency(e.target.value)
-    }
+  const change = (e) => {
+    setCurrency(e.target.value);
+  };
 
-    return (
-        <CurrencyContext.Provider value={{currency, change}}>
-            {props.children}
-        </CurrencyContext.Provider>
+  const [itemQuantity, setItemQuantity] = useState(0);
 
-    )
+  return (
+    <CurrencyContext.Provider
+      value={{ currency, change, cart, setCart, itemQuantity, setItemQuantity }}
+    >
+      {props.children}
+    </CurrencyContext.Provider>
+  );
 }
 
-export {CurrencyContextProvider, CurrencyContext}
+export { CurrencyContextProvider, CurrencyContext };

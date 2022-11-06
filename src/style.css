@@ -4,6 +4,12 @@
 XXXXXXXX GLOBAL XXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXX */
 
+:root{
+    /* COLORS */
+    --greyTheme:rgb(231, 231, 231);
+
+}
+
 body{
     margin: 0px;
     font-family: 'Rubik', sans-serif;
@@ -20,10 +26,17 @@ XXXXXXXXXXXXXXXXXXXXXXX */
 
 header {
     display: flex;
-    position: sticky;
+    position: fixed;
+    justify-content:center;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+    background-color: white;;
+}
+.headerContainer{
+    display: flex;
     justify-content:center;
     width: 1024px;
-    padding: 10px 0;
 }
 .headerChild1, .headerChild2, .headerChild3{
     width:33.3%;
@@ -32,11 +45,12 @@ header {
 }
 .headerChild1 nav{
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 .headerChild2{
     justify-content: center;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 600;
 }
 .headerChild3{
     justify-content: flex-end;
@@ -52,18 +66,21 @@ header {
 /* XXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXX MAIN SITE XXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXX */
+
+/*  WELCOME SECTION */
+
 .mainSite{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .welcomeSection{
-    /* margin-top: 50px; */
+    /* margin-top: 44px; */
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(231, 231, 231);
-    padding-top: 30px;
+    background-color: var(--greyTheme);
+    padding-top: 78px;
 }
 .welcomeSectionContainer{
     display: flex;
@@ -77,4 +94,85 @@ XXXXXXXXXXXXXXXXXXXXXXX */
     font-size: 60px;
     font-weight: 600;
     word-spacing: 10000px;
+}
+
+
+/*  POPULAR SECTION */
+
+.popularSection {
+    display: flex;
+    flex-direction: column;
+    width: 1024px;
+}
+
+.popularElements {
+    display: flex;
+    width: 1024px;
+    gap: 5%;
+
+}
+
+.itemCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30%;
+    font-size: 18px;
+}
+.itemName{
+    font-weight: 600;
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    z-index: 1;
+    border-radius: 5px;
+    border: var(--greyTheme) solid 1px;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+.imageContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .5s ease all;
+}
+.imageContainer img {
+      transition: .5s ease all; 
+      width: 100%; 
+      object-fit:cover;
+}
+
+.imageContainer:hover img {
+    transform: scale(1.1);
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXX
+XXXXXX PRODUCT SITE XXXXXX
+XXXXXXXXXXXXXXXXXXXXXXX */
+  
+.productPhotos {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.productPhotos img{
+    width: 200px;
+}
+.bigPhoto{
+    width: 400px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXX
+XXXXXX PRODUCT LIST XXXXXX
+XXXXXXXXXXXXXXXXXXXXXXX */
+
+.productList{
+    display: flex;
+    width: 1024px;
+    gap:5%;
+    flex-wrap: wrap;
 }
