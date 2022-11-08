@@ -8,10 +8,10 @@ function Product() {
   const { id } = useParams();
 
   return (
-    <div className="Product">
+    <div className="productContainer">
       <Header />
       <ProductDetails id={id} />
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 }

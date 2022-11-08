@@ -5,10 +5,10 @@ import React from "react";
 
 function ProductLists() {
   return (
-    <div className="productList">
+    <div className="productLists">
       <Header />
       <List />
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 }

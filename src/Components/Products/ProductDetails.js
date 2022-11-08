@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { datas } from "../../database/data";
 import { CurrencyContext } from "../Features/Currency";
 import React from "react";
+import ProductAddToCart from "./ProductAddToCart";
 
 function ProductDetails({ id }) {
   const context = useContext(CurrencyContext);
@@ -30,6 +31,15 @@ function ProductDetails({ id }) {
     }
   }
 
+  function focusStyle(e) {
+    if (e == capacity) {
+      return {
+        color: "white",
+        backgroundColor: "black",
+      };
+    }
+  }
+
   // add to cart
 
   function add() {
@@ -51,17 +61,46 @@ function ProductDetails({ id }) {
         (x) =>
           x.item == product.id && x.color == color && x.capacity == capacity
       ).quantity++;
-      context.setCart(context.cart);
     } else {
       context.setCart(context.cart.concat(newProduct));
     }
     context.setItemQuantity(context.itemQuantity + 1);
-    console.log(datas);
-    console.log(context);
+    setAddToCart(true);
   }
 
+  // add to Cart prompt
+
+  const [addToCart, setAddToCart] = useState(false);
+  const [style, setStyle] = useState({});
+  const [style2, setStyle2] = useState({});
+
+  function hidePrompt() {
+    setAddToCart(false);
+  }
+
+  useEffect(() => {
+    if (addToCart) {
+      setStyle({
+        visibility: "visible",
+        opacity: 1,
+      });
+      setStyle2({
+        transform: "translate(-50%, -50%)",
+      });
+    } else {
+      setStyle({
+        visibility: "hidden",
+        opacity: 0,
+      });
+      setStyle2({
+        transform: "translate(-50%, -65%)",
+      });
+    }
+  }, [addToCart]);
+
   return (
-    <section className="product" style={{ paddingTop: "70px" }}>
+    <div className="product">
+      <ProductAddToCart style={style} style2={style2} hidePrompt={hidePrompt} />
       <div className="productGallery">
         <div className="productPhotos">
           {product.gallery.map((element) => {
@@ -81,16 +120,16 @@ function ProductDetails({ id }) {
         <div className="productName">{product.name}</div>
         <div className="productCapacity">
           <div className="productLabel">CAPACITY:</div>
-          <div>
+          <div className="capacityTypes">
             {product.attributes[1].items.map((element) => {
               return (
                 <div
-                  className="capacityTypes"
+                  className="capacityType"
                   key={element.id}
                   onClick={() => {
                     setCapacity(element.id);
                   }}
-                  style={{ border: elementB(element.id) }}
+                  style={focusStyle(element.id)}
                 >
                   {element.displayValue}
                 </div>
@@ -100,19 +139,20 @@ function ProductDetails({ id }) {
         </div>
         <div className="productColor">
           <div className="productLabel">COLOR:</div>
-          <div>
+          <div className="colorTypes">
             {product.attributes[0].items.map((element) => {
               return (
                 <div
-                  className="colorTypes"
+                  className="colorType"
                   key={element.id}
                   onClick={() => {
                     setColor(element.id);
                   }}
-                  style={{ border: elementB(element.id) }}
-                >
-                  {element.displayValue}
-                </div>
+                  style={{
+                    backgroundColor: element.value,
+                    border: elementB(element.id),
+                  }}
+                ></div>
               );
             })}
           </div>
@@ -124,10 +164,12 @@ function ProductDetails({ id }) {
             {price.amount}
           </div>
         </div>
-        <button onClick={add}>ADD TO CART</button>
+        <button className="addToCartBtn" onClick={add}>
+          ADD TO CART
+        </button>
         <div className="productDescription">{product.description}</div>
       </div>
-    </section>
+    </div>
   );
 }
 
