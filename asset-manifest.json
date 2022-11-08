@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shop-app/static/css/main.9cd73610.css",
+    "main.css": "/shop-app/static/css/main.33785015.css",
     "main.js": "/shop-app/static/js/main.975653b3.js",
     "static/media/macbook-pro-2.jpg": "/shop-app/static/media/macbook-pro-2.51c024c47901dcd48ec9.jpg",
     "static/media/laptop-dell-2.jpg": "/shop-app/static/media/laptop-dell-2.8206f66f4347ad39252c.jpg",
@@ -22,11 +22,11 @@
     "static/media/welcome3.jpg": "/shop-app/static/media/welcome3.7cc34d8b64bbd0ec9fc5.jpg",
     "static/media/shopping-cart.png": "/shop-app/static/media/shopping-cart.dc7f9a045ac0bc7b2d8c.png",
     "index.html": "/shop-app/index.html",
-    "main.9cd73610.css.map": "/shop-app/static/css/main.9cd73610.css.map",
+    "main.33785015.css.map": "/shop-app/static/css/main.33785015.css.map",
     "main.975653b3.js.map": "/shop-app/static/js/main.975653b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.9cd73610.css",
+    "static/css/main.33785015.css",
     "static/js/main.975653b3.js"
   ]
 }
