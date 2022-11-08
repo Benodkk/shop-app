@@ -1,10 +1,8 @@
 {
   "files": {
     "main.css": "/shop-app/static/css/main.9cd73610.css",
-    "main.js": "/shop-app/static/js/main.5ddaf14e.js",
+    "main.js": "/shop-app/static/js/main.975653b3.js",
     "static/media/macbook-pro-2.jpg": "/shop-app/static/media/macbook-pro-2.51c024c47901dcd48ec9.jpg",
-    "static/media/welcome1.jpg": "/shop-app/static/media/welcome1.ced6c7189a8617f99990.jpg",
-    "static/media/welcome2.jpg": "/shop-app/static/media/welcome2.1febcf793d649ec3f3c3.jpg",
     "static/media/laptop-dell-2.jpg": "/shop-app/static/media/laptop-dell-2.8206f66f4347ad39252c.jpg",
     "static/media/iphone-13-2.jpg": "/shop-app/static/media/iphone-13-2.7ad0069c5cfe57f065ca.jpg",
     "static/media/laptop-dell.jpg": "/shop-app/static/media/laptop-dell.1655505db7e72bea7ce5.jpg",
@@ -18,15 +16,17 @@
     "static/media/iphone-11-2.jpg": "/shop-app/static/media/iphone-11-2.5e4b877f1311e27cb5f1.jpg",
     "static/media/iphone13.jpg": "/shop-app/static/media/iphone13.d2cf2442171a7d026504.jpg",
     "static/media/iphone13-1.jpg": "/shop-app/static/media/iphone13-1.4df27c6ff8b7e30c3160.jpg",
-    "static/media/welcome3.jpg": "/shop-app/static/media/welcome3.724b9e6e0aeafdb7cc76.jpg",
+    "static/media/welcome2.jpg": "/shop-app/static/media/welcome2.97d12835fa0eb9b65e83.jpg",
+    "static/media/welcome1.jpg": "/shop-app/static/media/welcome1.bb7faa8337c2911e91f9.jpg",
     "static/media/iphone-X-2.jpg": "/shop-app/static/media/iphone-X-2.aea44149a4ba8bb097b4.jpg",
+    "static/media/welcome3.jpg": "/shop-app/static/media/welcome3.7cc34d8b64bbd0ec9fc5.jpg",
     "static/media/shopping-cart.png": "/shop-app/static/media/shopping-cart.dc7f9a045ac0bc7b2d8c.png",
     "index.html": "/shop-app/index.html",
     "main.9cd73610.css.map": "/shop-app/static/css/main.9cd73610.css.map",
-    "main.5ddaf14e.js.map": "/shop-app/static/js/main.5ddaf14e.js.map"
+    "main.975653b3.js.map": "/shop-app/static/js/main.975653b3.js.map"
   },
   "entrypoints": [
     "static/css/main.9cd73610.css",
-    "static/js/main.5ddaf14e.js"
+    "static/js/main.975653b3.js"
   ]
 }
